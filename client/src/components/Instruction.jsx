@@ -60,7 +60,7 @@ const Instruction = () => {
                       style={{ alignSelf: "end" }}
                       onClick={handleSubmit}
                     >
-                      Submit
+                      Start
                     </Button>
                   </div>
                 )}

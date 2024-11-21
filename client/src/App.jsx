@@ -12,7 +12,7 @@ import MCQ from "./components/MCQ";
 import Test from "./components/Test";
 import FeedBack from "./components/FeedBack";
 import CodeInstruction from "./components/CodeIntruction";
- 
+import CompletePreparation  from "./components/CompletePreparation";
 
 import { UserProvider } from "./context/UserContext";
 import { InterviewProvider } from "./context/InterviewContext";
@@ -41,6 +41,7 @@ function App() {
             <Route path="/test" element={<Test />} />
             <Route path="/feedback" element={<FeedBack />} />
             <Route path="/codeInstruction" element={<CodeInstruction />} />
+            <Route path="/complete-preparation" element={<CompletePreparation />} />
           </Routes>
           </ComponentProvider>
         </InterviewProvider>

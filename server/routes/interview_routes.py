@@ -181,7 +181,44 @@ def create_pdf_with_reportlab_coding(data, file_path):
     p.showPage()
     p.save()
     return score
+# @interview_route.route('/question', methods=['POST'])
+# def generate_question():
+#     try:
+#         data = request.json
+#         topic = data.get("topic")
+        
 
+#         if not topic:
+#             return jsonify({"error": "Topic is required."}), 400
+
+#         # Start with a very basic question
+#         difficulty = "basic"
+#         prompt = f"You're an interviewer conducting a technical interview on {topic}. Ask a {difficulty} question (maximum 15 words) and provide an answer."
+
+#         # Generate the initial question and answer
+#         content = generate_content(prompt)
+
+#         if "Answer:" in content:
+#             question, answer = content.split("Answer:", 1)
+#             question = enforce_word_limit(question.strip(), max_words=15)
+#             follow_up_data = {
+#                 "question": question,
+#                 "correctAnswer": answer.strip(),
+#                 "followUpIndex": 0,
+#                 "difficulty": difficulty
+#             }
+#             return jsonify(follow_up_data)
+#         else:
+#             question = enforce_word_limit(content.strip(), max_words=15)
+#             return jsonify({
+#                 "question": question,
+#                 "correctAnswer": "No answer provided in the generated content.",
+#                 "followUpIndex": 0,
+#                 "difficulty": difficulty
+#             })
+
+#     except Exception as e:
+#         return jsonify({"error": str(e)}), 500
 
 @interview_route.route('/get_coding_report', methods=['POST'])
 # @login_required
